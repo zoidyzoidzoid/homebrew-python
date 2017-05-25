@@ -25,18 +25,18 @@ class Python34 < Formula
   skip_clean "bin/easy_install3", "bin/easy_install-3.4"
 
   resource "setuptools" do
-    url "https://pypi.python.org/packages/source/s/setuptools/setuptools-19.4.tar.gz"
-    sha256 "214bf29933f47cf25e6faa569f710731728a07a19cae91ea64f826051f68a8cf"
+    url "https://pypi.io/packages/source/s/setuptools/setuptools-23.1.0.tar.gz"
+    sha256 "4e269d36ba2313e6236f384b36eb97b3433cf99a16b94c74cca7eee2b311f2be"
   end
 
   resource "pip" do
-    url "https://pypi.python.org/packages/source/p/pip/pip-8.0.2.tar.gz"
-    sha256 "46f4bd0d8dfd51125a554568d646fe4200a3c2c6c36b9f2d06d2212148439521"
+    url "https://pypi.io/packages/source/p/pip/pip-8.1.2.tar.gz"
+    sha256 "4d24b03ffa67638a3fa931c09fd9e0273ffa904e95ebebe7d4b1a54c93d7b732"
   end
 
   resource "wheel" do
-    url "https://pypi.python.org/packages/source/w/wheel/wheel-0.26.0.tar.gz"
-    sha256 "eaad353805c180a47545a256e6508835b65a8e830ba1093ed8162f19a50a530c"
+    url "https://pypi.io/packages/source/w/wheel/wheel-0.29.0.tar.gz"
+    sha256 "1ebb8ad7e26b448e9caa4773d2357849bf80ff9e313964bcaf79cbf0201a1648"
   end
 
   # Homebrew's tcl-tk is built in a standard unix fashion (due to link errors)
