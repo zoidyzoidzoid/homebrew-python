@@ -60,7 +60,7 @@ class Python35 < Formula
 
   fails_with :llvm do
     build 2336
-    cause <<-EOS.undent
+    cause <<-EOS
       Could not find platform dependent libraries <exec_prefix>
       Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
       python.exe(14122) malloc: *** mmap(size=7310873954244194304) failed (error code=12)
@@ -237,7 +237,7 @@ class Python35 < Formula
     end
 
     cfg = lib_cellar/"distutils/distutils.cfg"
-    cfg.atomic_write <<-EOF.undent
+    cfg.atomic_write <<-EOF
       [install]
       prefix=#{HOMEBREW_PREFIX}
 
@@ -252,7 +252,7 @@ class Python35 < Formula
   end
 
   def sitecustomize
-    <<-EOF.undent
+    <<-EOF
       # This file is created by Homebrew and is executed on each python startup.
       # Don't print from here, or else python command line scripts may fail!
       # <https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md>
@@ -290,7 +290,7 @@ class Python35 < Formula
   end
 
   def caveats
-    text = <<-EOS.undent
+    text = <<-EOS
       Pip and setuptools have been installed. To update them
         pip3.5 install --upgrade pip setuptools
 
@@ -304,7 +304,7 @@ class Python35 < Formula
     EOS
 
     # Tk warning only for 10.6
-    tk_caveats = <<-EOS.undent
+    tk_caveats = <<-EOS
 
       Apple's Tcl/Tk is not recommended for use with Python on Mac OS X 10.6.
       For more information see: http://www.python.org/download/mac/tcltk/
